@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  app1:
+    build:
+      context: ./app-1
+    ports:
+      - "5076:5076"
+    volumes:
+      - ./app1:/app
+
+  app2:
+    build:
+      context: ./app-2
+    ports:
+      - "5032:5032"
+    volumes:
+      - ./app2:/app
